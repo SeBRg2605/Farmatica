@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sebastián Rojas Guzmán
@@ -61,6 +64,24 @@ public void setApellidos(String apellidos) {
 } // Fin de los Get y Set
 
 
+//Metodos
+public void verificarLogin(String user , String pass){
+
+    int option = 0;
+    do{
+    String username = JOptionPane.showInputDialog("Escriba nobre de ususario");
+    String password = JOptionPane.showInputDialog("Por favor digite su contraseña");
+    if (username.equals(user) && password.equals(pass)){
+       JOptionPane.showMessageDialog(null,"Bienvenido " + getNombre());
+       option = 1;
+    } else {
+        JOptionPane.showMessageDialog(null,"Error de autentificacion, intente de nuevo por favor");
+    }    
+  
+    }while (option !=1);
+
+
+}//Fin del metodo verificarLogin
 
 
 
